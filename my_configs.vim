@@ -1,7 +1,11 @@
 set number
 set colorcolumn=80
 set nowrap
-"set cursorline
+set cursorline
+set expandtab       " tabs are spaces
+
+nnoremap j gj
+nnoremap k gk
 
 let base16colorspace=256
 
