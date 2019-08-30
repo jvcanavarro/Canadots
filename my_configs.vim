@@ -1,11 +1,12 @@
 set number
 set colorcolumn=80
 set nowrap
-set cursorline
+"set cursorline
 
-"let base16colorspace=256
+let base16colorspace=256
 
-colorscheme patagonia 
+set background=dark
+colorscheme base16-synth-midnight-dark 
 
 set termguicolors
 
