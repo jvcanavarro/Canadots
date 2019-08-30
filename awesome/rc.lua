@@ -92,11 +92,11 @@ local terminal     = "terminator"
 local editor       = os.getenv("EDITOR") or "vim"
 local gui_editor   = "vim"
 local browser      = "google-chrome"
-local guieditor    = "code"
+local guieditor    = "vim"
 local scrlocker    = "slock"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "1" }
+awful.util.tagnames = { "1" , "2" , "3" }
 awful.layout.layouts = {
     awful.layout.suit.floating,
     awful.layout.suit.tile,
@@ -655,7 +655,9 @@ awful.rules.rules = {
                      buttons = clientbuttons,
                      screen = awful.screen.preferred,
                      placement = awful.placement.no_overlap+awful.placement.no_offscreen,
-                     size_hints_honor = false
+                     size_hints_honor = false,
+                     --opacity = 0.8,
+
      }
     },
     { rule = { class = "Terminal" },
@@ -670,6 +672,8 @@ awful.rules.rules = {
 
     { rule = { class = "Gimp", role = "gimp-image-window" },
           properties = { maximized = true } },
+        { rule = { class = "XTerm" },
+    properties = { opacity = 0.75 } },
 }
 -- }}}
 

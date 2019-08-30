@@ -15,7 +15,8 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 local theme                                     = {}
 theme.confdir                                   = os.getenv("HOME") .. "/.config/awesome/themes/multicolor"
-theme.wallpaper                                 = theme.confdir .. "/wall.png"
+-- theme.wallpaper                                 = theme.confdir .. "/wall.png"
+theme.wallpaper                                 = "~/Pictures/Wallpapers/1566227032447.jpg"
 theme.font                                      = "xos4 Terminus 8"
 theme.menu_bg_normal                            = "#000000"
 theme.menu_bg_focus                             = "#000000"
@@ -282,7 +283,7 @@ function theme.at_screen_connect(s)
     s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons)
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = 20, bg = theme.bg_normal, fg = theme.fg_normal })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = 20, bg = theme.bg_normal, fg = theme.fg_normal, opacity=0.9 })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -314,12 +315,12 @@ function theme.at_screen_connect(s)
             cpu.widget,
             --fsicon,
             --theme.fs.widget,
-            weathericon,
-            theme.weather.widget,
+            -- weathericon,
+            -- theme.weather.widget,
             tempicon,
             temp.widget,
-            baticon,
-            bat.widget,
+            -- baticon,
+            -- bat.widget,
             clockicon,
             mytextclock,
         },
