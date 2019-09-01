@@ -6,27 +6,32 @@ let s:bufnr       = bufnr('')
 " Helpers
 "
 
-" Ignores unexpected keys.
-"
-" expected - list of signs
-function s:assert_signs(expected, filename)
+" Ignores unexpected keys in actual.
+function s:assert_list_of_dicts(expected, actual)
   if empty(a:expected)
-    call assert_equal(a:expected, [])
+    call assert_equal([], a:actual)
     return
   endif
 
   let expected_keys = keys(a:expected[0])
-  let actual = sign_getplaced(a:filename, {'group': 'gitgutter'})[0].signs
 
-  for sign in actual
-    for k in keys(sign)
+  for dict in a:actual
+    for k in keys(dict)
       if index(expected_keys, k) == -1
-        call remove(sign, k)
+        call remove(dict, k)
       endif
     endfor
   endfor
 
-  call assert_equal(a:expected, actual)
+  call assert_equal(a:expected, a:actual)
+endfunction
+
+" Ignores unexpected keys.
+"
+" expected - list of signs
+function s:assert_signs(expected, filename)
+  let actual = sign_getplaced(a:filename, {'group': 'gitgutter'})[0].signs
+  call s:assert_list_of_dicts(a:expected, actual)
 endfunction
 
 function s:git_diff()
@@ -888,4 +893,20 @@ function Test_empty_file()
   call s:assert_signs([], 'oneline.txt')
 
   set eol fixeol
+endfunction
+
+
+function Test_quickfix()
+  call setline(5, ['A', 'B'])
+  call setline(9, ['C', 'D'])
+  write
+
+  GitGutterQuickFix
+
+  let expected = [
+        \ {'lnum': 5, 'bufnr': bufnr(''), 'text': '-e'},
+        \ {'lnum': 9, 'bufnr': bufnr(''), 'text': '-i'}
+        \ ]
+
+  call s:assert_list_of_dicts(expected, getqflist())
 endfunction
