@@ -1,8 +1,19 @@
-# .dotfiles e configs que to usando no meu pc - note
+# Canavarro Dotfiles
 
-Mantendo esse repo aqui apenas para casos de backup onde nao terei que reconfigurar a maioria dos programas da minha distro.
+My personal settings, for eventual recovery or desktop replacements.
 
+* bashrc
+* ranger
+* fish
 * vimrc
 * compton
 * awesome-wm
+
+## TODOs
+
+- Shell script automatic instalation
+- Add base16-shell and vim
+- Add vim plugins
+- Improve compton.conf
+
 
