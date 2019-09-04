@@ -1,5 +1,5 @@
 function fish_prompt
-	
+
     # - green lines if the last return command is OK, red otherwise
     # - your user name, in red if root or yellow otherwise
     # - your hostname, in cyan if ssh or blue otherwise
@@ -61,7 +61,7 @@ function fish_prompt
     set_color -o white
     # echo -n :(prompt_pwd)
     set_color -o purple
-    set folder (string replace 'canavarro'  '~' (basename $PWD))
+    set folder (string replace 'cana'  '~' (basename $PWD))
     echo -n " "$folder
     set_color -o red
     echo -n ']'
