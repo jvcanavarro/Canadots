@@ -91,12 +91,12 @@ local altkey       = "Mod1"
 local terminal     = "terminator"
 local editor       = os.getenv("EDITOR") or "vim"
 local gui_editor   = "vim"
-local browser      = "google-chrome"
+local browser      = "firefox"
 local guieditor    = "vim"
 local scrlocker    = "slock"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "1" , "2" , "3" }
+awful.util.tagnames = { "1" , "2" , "3" , "4", "5"}
 awful.layout.layouts = {
     awful.layout.suit.floating,
     awful.layout.suit.tile,
@@ -656,19 +656,19 @@ awful.rules.rules = {
                      screen = awful.screen.preferred,
                      placement = awful.placement.no_overlap+awful.placement.no_offscreen,
                      size_hints_honor = false,
-                     --opacity = 0.8,
+                     -- opacity = 0.8,
 
      }
     },
-    { rule = { class = "Terminal" },
-    properties = { opacity = 0.75 } },
+    -- { rule = { class = "Terminal" },
+    -- properties = { opacity = 0.75 } },
     -- Titlebars
     { rule_any = { type = { "dialog", "normal" } },
       properties = { titlebars_enabled = false} },
 
     -- Set Firefox to always map on the first tag on screen 1.
-    { rule = { class = "Firefox" },
-      properties = { screen = 1, tag = awful.util.tagnames[1] } },
+    -- { rule = { class = "Firefox" },
+    --   properties = { screen = 1, tag = awful.util.tagnames[1] } },
 
     { rule = { class = "Gimp", role = "gimp-image-window" },
           properties = { maximized = true } },
