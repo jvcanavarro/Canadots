@@ -17,7 +17,7 @@ let g:airline_theme='minimalist'
 
 set background=dark
 
-colorscheme base16-synth-midnight-dark
+colorscheme gruvbox
 
 hi Error NONE
 hi ErrorMsg NONE

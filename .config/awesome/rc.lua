@@ -91,7 +91,7 @@ local altkey       = "Mod1"
 local terminal     = "terminator"
 local editor       = os.getenv("EDITOR") or "vim"
 local gui_editor   = "vim"
-local browser      = "firefox"
+local browser      = "google-chrome-stable"
 local guieditor    = "vim"
 local scrlocker    = "slock"
 

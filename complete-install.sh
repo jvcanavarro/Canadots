@@ -11,12 +11,32 @@ pacman -Syu
 # Git clone Personal Dots
 # Git clone Luke LARBS
 
+git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
+
+
+git clone https://github.com/jvcanavarro/canadots.git
+cd canadots
+cp -r .config ~/.config
+cp .bashrc ~
+cp my_configs.vim ~/.vim_runtime
+
+git clone https://github.com/LukeSmithxyz/LARBS.git
+curl -LO larbs.xyz/larbs.sh
+# sh larbs.sh
+
+https://github.com/lervag/vimtex.git ~/.vim_runtime/my_plugins
+
 # iii) Personal Preferred Applications
 
 # Awesome-WM
 # Ranger
 # Gotop
 # ...
+
+pacman -S htop ranger awesome terminator fish neofetch firefox python-pip python2-pip lein tex nvidia nvidia-libgl lib32-nvidia-utils lib32-nvidia-libgl lib32-mesa-demos libva-vdpau-driver nvidia-settings 
+
+systemctl enable nvidia-persistenced.service
 
 # iv) University Necessities
 
