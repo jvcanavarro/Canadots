@@ -1,3 +1,6 @@
+" Plugins -> Ale, Supertab, Jedi
+" Python -> Flake8
+
 set number
 set nowrap
 set expandtab
@@ -6,10 +9,47 @@ set laststatus=0
 set showtabline=0
 " set colorcolumn=80
 " set cursorline
+
 autocmd FileType * setlocal formatoptions-= formatoptions-=r formatoptions-=o
 
 nnoremap j gj
 nnoremap k gk
+
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+"Python
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
+
+" Jedi
+autocmd FileType python setlocal completeopt-=preview
+
+
+"Ale -> Linting & Fixing
+
+let g:ale_linters_explicit = 1
+let g:ale_fix_on_save = 1
+
+let g:ale_linters = {
+\   'python': ['flake8'],
+\}
+
+let g:ale_fixers = {
+\   'python' : ['yapf'],
+\}
+
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
 
 " let base16colorspace=256
 
