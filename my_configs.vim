@@ -1,19 +1,20 @@
 set number
-" set colorcolumn=80
-" set cursorline
 set nowrap
 set expandtab
 set foldcolumn=0
 set laststatus=0
 set showtabline=0
+" set colorcolumn=80
+" set cursorline
+autocmd FileType * setlocal formatoptions-= formatoptions-=r formatoptions-=o
 
 nnoremap j gj
 nnoremap k gk
 
 " let base16colorspace=256
 
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='minimalist'
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline_theme='minimalist'
 
 set background=dark
 
@@ -35,6 +36,7 @@ function! ToggleHiddenAll()
         set noshowmode
         set noruler
         set laststatus=0
+        set showtabline=0
         set noshowcmd
     else
         let s:hidden_all = 0
