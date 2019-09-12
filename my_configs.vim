@@ -1,5 +1,6 @@
-" Plugins -> Ale, Supertab, Jedi
-" Python -> Flake8
+" Plugins -> Ale, Supertab, Jedi, Fireplace, Vimtex
+" Python -> Flake8, Yapf
+" Remove Lightline and Tabline from Sources
 
 set number
 set nowrap
