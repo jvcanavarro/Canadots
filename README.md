@@ -17,13 +17,13 @@ My personal/professional settings, for eventual recovery or desktop replacements
 
 I use **Awesome** default setup, minus set-tabline and air-line for more screen editing space. Below are listed my preffered plugins when editing with VIM.
 
-##### General
-**Ale** for linting, auto fixing and formatting files; **Supertab** for fastest completations; **Polyglot** for amazing syntax highlighting when editing files with LISP based languages. Using _Afterglow_ colorscheme, provided by **Awesome Colorschemes**, especially when working with Clojure.
-##### Python
+#### General
+**Ale** for linting, auto fixing and formatting files; **Supertab** for fastest completations; **Polyglot** for amazing syntax highlighting when editing files with LISP based languages. Using _Afterglow_, provided by **Awesome Colorschemes**, especially when working with Clojure.
+#### Python
 **Jedi** for documentation at buffer and quick suggestions; **Yapf** for auto fixing and **Flake8** for linting. Actually having some performance problems when saving files and inserting points before classes.
-##### Clojure 
+#### Clojure 
 **Fireplace** for buffer documentation, logical analysis and **Leiningen REPL** integration. Finally, Tim Pope's **Salve** for automatic REPL run.
-##### Latex 
+#### Latex 
 **Vimtex** integrated with **LatexMK** for compiling and **Zathura**, my favorite document reader, for real time visualization.
 
 
@@ -40,7 +40,7 @@ Before using Mint for almost one year, I moved to **Arch Linux** aiming at bette
 ## In Progress
 - Shell script to automatizate the pos-installation process
 
-## TODO
+## Todo
 - [ ] Improve README layout
 - [ ] Configure harder tools
 - [ ] Add Desktop Wallpaper
