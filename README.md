@@ -19,7 +19,7 @@ My personal/professional settings, for eventual recovery or desktop replacements
 ##### Python
 **Jedi** for documentation at buffer and quick suggestions; **Yapf** for auto fixing and **Flake8** for linting.
 ##### Clojure 
-**Fireplace** for buffer documentation, logical analysis and **REPL** integration.
+**Fireplace** for buffer documentation, logical analysis and **REPL** integration. Finally, Tim Pope's **Salve** for automatic REPL run.
 ##### Latex 
 **Vimtex** integrated with **LatexMK** for compiling and **Zathura**, my favorite document reader, for real time visualization.
 
@@ -39,4 +39,5 @@ My personal/professional settings, for eventual recovery or desktop replacements
 - [ ] Configure harder tools
 - [ ] Add Desktop Wallpaper
 - [ ] Add cited plugins references
+- [ ] Syncronize my Home and Internship configurations
 
