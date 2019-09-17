@@ -1,10 +1,13 @@
-" Plugins -> Ale, Supertab, Jedi, Fireplace, Vimtex
+" Plugins -> Ale, Supertab, Jedi, Fireplace, Vimtex, Polyglot, Awesome Colorschemes
 " Python -> Flake8, Yapf
 " Remove Lightline and Tabline from Sources
+
+syntax on
 
 set number
 set nowrap
 set expandtab
+set nocompatible
 set foldcolumn=0
 set laststatus=0
 set showtabline=0
@@ -33,7 +36,8 @@ au BufNewFile,BufRead *.py
     \ set fileformat=unix
 
 " Jedi
-autocmd FileType python setlocal completeopt-=preview
+" autocmd FileType python setlocal completeopt-=preview
+let g:jedi#popup_on_dot = 0
 
 
 "Ale -> Linting & Fixing
@@ -59,7 +63,7 @@ highlight clear ALEWarningSign
 
 set background=dark
 
-colorscheme gruvbox
+colorscheme one-dark
 
 hi Error NONE
 hi ErrorMsg NONE
