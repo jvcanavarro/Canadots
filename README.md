@@ -34,8 +34,8 @@ I use **Awesome** default setup, minus set-tabline and air-line for more screen 
 Before using Mint for almost one year, I moved to **Arch Linux** aiming at better performance and less installed packages. I'm still using Cinammon Desktop in rare situations, especially when can't correct some errors via window manager. **Awesome** and **i3-gaps** are my favorite managers, simple and efficient for what I want to do. **LARBS** provide the rest of the tools and configuration for my setup.
 
 ## Done
-- [x] organize simplest configs
-- [x] integration of Luke Smith LARBS and my settings
+- [x] Organize simplest configs
+- [x] Integration of Luke Smith LARBS and my settings
 - [x] List used vim plugins
 
 ## In Progress

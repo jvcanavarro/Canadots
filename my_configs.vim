@@ -122,7 +122,8 @@ autocmd Filetype rmd inoremap ,r ```{r}<CR>```<CR><CR><esc>2kO
 autocmd Filetype rmd inoremap ,p ```{python}<CR>```<CR><CR><esc>2kO
 autocmd Filetype rmd inoremap ,c ```<cr>```<cr><cr><esc>2kO
 
-" autocmd FileType markdown nnoremap <buffer> <C-x> !pandoc % -t beamer -o %:r.pdf %% zathura %:r.pdf
+autocmd BufWritePost *.md !pandoc % -t beamer -o %:r.pdf
+
 
 set background=dark
 
