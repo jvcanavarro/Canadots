@@ -1,4 +1,6 @@
 " Plugins -> Ale, Supertab, Jedi, Fireplace, Vimtex, Polyglot, Awesome Colorschemes
+" Salve, Markdown.
+
 " Python -> Flake8, Yapf
 " Remove Lightline and Tabline from Sources
 
@@ -38,12 +40,12 @@ au BufNewFile,BufRead *.py
     \ set fileformat=unix
 
 " Jedi
+
 " autocmd FileType python setlocal completeopt-=preview
 let g:jedi#popup_on_dot = 0
 
 
 "Ale -> Linting & Fixing
-
 let g:ale_linters_explicit = 1
 let g:ale_fix_on_save = 1
 
@@ -58,10 +60,8 @@ let g:ale_fixers = {
 highlight clear ALEErrorSign
 highlight clear ALEWarningSign
 
-" let base16colorspace=256
-
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline_theme='minimalist'
+"Polyglot
+let g:polyglot_disabled = ['latex']
 
 set background=dark
 
@@ -96,4 +96,5 @@ endfunction
 
 nnoremap <S-h> :call ToggleHiddenAll()<CR>
 
+" let base16colorspace=256
 set termguicolors

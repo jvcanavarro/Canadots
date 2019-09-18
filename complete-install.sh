@@ -30,7 +30,7 @@ https://github.com/lervag/vimtex.git ~/.vim_runtime/my_plugins
 # iii) Personal Preferred Applications
 
 
-pacman -S htop ranger awesome terminator fish neofetch firefox python-pip python2-pip lein tex nvidia nvidia-libgl lib32-nvidia-utils lib32-nvidia-libgl lib32-mesa-demos libva-vdpau-driver nvidia-settings flameshot
+pacman -S htop ranger awesome terminator fish neofetch firefox python-pip python2-pip lein tex nvidia nvidia-libgl lib32-nvidia-utils lib32-nvidia-libgl lib32-mesa-demos libva-vdpau-driver nvidia-settings flameshot tree
 
 systemctl enable nvidia-persistenced.service
 
