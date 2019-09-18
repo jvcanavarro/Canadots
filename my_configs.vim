@@ -25,6 +25,8 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+nnoremap <esc><esc> :noh<return>
+
 "Python
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
@@ -63,7 +65,7 @@ highlight clear ALEWarningSign
 
 set background=dark
 
-colorscheme one-dark
+colorscheme afterglow
 
 hi Error NONE
 hi ErrorMsg NONE
