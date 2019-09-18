@@ -24,8 +24,9 @@ I use **Awesome** default setup, minus set-tabline and air-line for more screen 
 #### Clojure 
 **Fireplace** for buffer documentation, logical analysis and **Leiningen REPL** integration. Finally, Tim Pope's **Salve** for automatic REPL run.
 #### Latex 
-**Vimtex** integrated with **LatexMK** for compiling and **Zathura**, my favorite document reader, for real time visualization.
-
+**Vimtex** integrated with **LatexMK** for compiling and **Zathura**, my favorite document reader, for real time visualization. I'm also experimenting some presentation creation with Latex using **Beamer** userpackage.
+#### Markdown
+**Vim-Markdown** provides a nice syntax when editing .md files. Also, **Pandoc-Vim** allow me to create slide pdfs way more easier using Beamer and Pandoc.
 
 > I would appreciate any suggestions of plugins for code/tex snippets, actually looking for one that improves and fits with my workflow.
 
@@ -39,9 +40,8 @@ Before using Mint for almost one year, I moved to **Arch Linux** aiming at bette
 
 ## In Progress
 - Shell script to automatizate the pos-installation process
-
+- Improve README layout
 ## Todo
-- [ ] Improve README layout
 - [ ] Configure harder tools
 - [ ] Add Desktop Wallpaper
 - [ ] Add cited plugins references
