@@ -1,8 +1,8 @@
-" Plugins -> Ale, Supertab, Jedi, Fireplace, Vimtex, Polyglot, Awesome Colorschemes
-" Salve, Markdown.
+" Plugins -> Supertab, Jedi, Fireplace, Vimtex, Polyglot, Awesome Colorschemes
 
 " Python -> Flake8, Yapf
-" Remove Lightline and Tabline from Sources
+
+" Remove Lightline, Tabline from Sources, Goyo and Zenroom.
 
 syntax on
 
@@ -122,7 +122,7 @@ autocmd Filetype rmd inoremap ,r ```{r}<CR>```<CR><CR><esc>2kO
 autocmd Filetype rmd inoremap ,p ```{python}<CR>```<CR><CR><esc>2kO
 autocmd Filetype rmd inoremap ,c ```<cr>```<cr><cr><esc>2kO
 
-autocmd BufWritePost *.md !pandoc % -t beamer -o %:r.pdf
+autocmd BufWritePost *.md silent !pandoc % -t beamer -o %:r.pdf
 
 
 set background=dark
