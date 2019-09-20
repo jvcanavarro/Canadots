@@ -39,6 +39,8 @@ au BufNewFile,BufRead *.py
     \ set autoindent |
     \ set fileformat=unix
 
+nnoremap <silent> <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr><cr>
+
 " Jedi
 
 " autocmd FileType python setlocal completeopt-=preview
