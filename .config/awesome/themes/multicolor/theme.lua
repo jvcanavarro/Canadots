@@ -16,8 +16,8 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.confdir                                   = os.getenv("HOME") .. "/.config/awesome/themes/multicolor"
 -- theme.wallpaper                                 = theme.confdir .. "/wall.png"
-theme.wallpaper                                 = "~/.config/wall.jpg"
-theme.font                                      = "Inconsolata Regular 11"
+theme.wallpaper                                 = "~/.config/wall.png"
+theme.font                                      = "Inconsolata Regular 10"
 theme.menu_bg_normal                            = "#000000"
 theme.menu_bg_focus                             = "#000000"
 theme.bg_normal                                 = "#000000"
@@ -290,11 +290,11 @@ function theme.at_screen_connect(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            s.mylayoutbox,
+            -- s.mylayoutbox,
             s.mytaglist,
             s.mypromptbox,
-            mpdicon,
-            theme.mpd.widget,
+            -- mpdicon,
+            -- theme.mpd.widget,
         },
         --s.mytasklist, -- Middle widget
         nil,
@@ -303,10 +303,10 @@ function theme.at_screen_connect(s)
             wibox.widget.systray(),
             --mailicon,
             --theme.mail.widget,
-            netdownicon,
-            netdowninfo,
-            netupicon,
-            netupinfo.widget,
+            -- netdownicon,
+            -- netdowninfo,
+            -- netupicon,
+            -- netupinfo.widget,
             volicon,
             theme.volume.widget,
             memicon,
@@ -317,8 +317,8 @@ function theme.at_screen_connect(s)
             --theme.fs.widget,
             -- weathericon,
             -- theme.weather.widget,
-            tempicon,
-            temp.widget,
+            -- tempicon,
+            -- temp.widget,
             -- baticon,
             -- bat.widget,
             clockicon,
