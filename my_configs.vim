@@ -124,7 +124,7 @@ autocmd Filetype rmd inoremap ,r ```{r}<CR>```<CR><CR><esc>2kO
 autocmd Filetype rmd inoremap ,p ```{python}<CR>```<CR><CR><esc>2kO
 autocmd Filetype rmd inoremap ,c ```<cr>```<cr><cr><esc>2kO
 
-autocmd BufWritePost *.md silent !pandoc % -t beamer -o %:r.pdf
+" autocmd BufWritePost *.md silent !pandoc % -t beamer -o %:r.pdf
 
 
 set background=dark
