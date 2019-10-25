@@ -49,7 +49,7 @@ let g:jedi#popup_on_dot = 0
 
 "Ale -> Linting & Fixing
 let g:ale_linters_explicit = 1
-let g:ale_fix_on_save = 1
+" let g:ale_fix_on_save = 1
 
 let g:ale_linters = {
 \   'python': ['flake8'],
