@@ -29,6 +29,11 @@ nnoremap <C-H> <C-W><C-H>
 
 nnoremap <esc><esc> :noh<return>
 
+
+let g:airline_powerline_fonts = 1
+" let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'minimalist'
+
 "Python
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
@@ -127,13 +132,14 @@ autocmd Filetype rmd inoremap ,c ```<cr>```<cr><cr><esc>2kO
 " autocmd BufWritePost *.md silent !pandoc % -t beamer -o %:r.pdf
 
 
+
 set background=dark
 
-colorscheme afterglow
+colorscheme tequila-sunrise
 
 hi Error NONE
 hi ErrorMsg NONE
-hi Comment cterm=italic
+" hi Comment cterm=italic
 hi Comment guifg=#5C6370 ctermfg=59
 
 hi Normal     ctermbg=NONE guibg=NONE
