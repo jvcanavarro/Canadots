@@ -4,7 +4,7 @@
 
 " Remove Lightline, Tabline from Sources, Goyo and Zenroom.
 
-syntax on
+syntax enable
 
 set number
 set nowrap
@@ -21,6 +21,8 @@ autocmd FileType * setlocal formatoptions-= formatoptions-=r formatoptions-=o
 nnoremap j gj
 nnoremap k gk
 
+nnoremap o o<Esc>
+
 "split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -31,8 +33,8 @@ nnoremap <esc><esc> :noh<return>
 
 
 let g:airline_powerline_fonts = 1
-" let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'minimalist'
+let g:airline#extensions#tabline#enabled = 1
+" let g:airline_theme = 'minimalist'
 
 "Python
 au BufNewFile,BufRead *.py
@@ -134,17 +136,22 @@ autocmd Filetype rmd inoremap ,c ```<cr>```<cr><cr><esc>2kO
 
 
 set background=dark
+" set background=light
 
-colorscheme tequila-sunrise
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_contrast_light = 'soft'
+
+" colorscheme gruvbox
+colorscheme solarized
 
 hi Error NONE
 hi ErrorMsg NONE
 " hi Comment cterm=italic
-hi Comment guifg=#5C6370 ctermfg=59
+" hi Comment guifg=#5C6370 ctermfg=59
 
-hi Normal     ctermbg=NONE guibg=NONE
-hi LineNr     ctermbg=NONE guibg=NONE
-hi SignColumn ctermbg=NONE guibg=NONE
+" hi Normal     ctermbg=NONE guibg=NONE
+" hi LineNr     ctermbg=NONE guibg=NONE
+" hi SignColumn ctermbg=NONE guibg=NONE
 
 let s:hidden_all = 0
 function! ToggleHiddenAll()
@@ -167,4 +174,4 @@ endfunction
 nnoremap <S-h> :call ToggleHiddenAll()<CR>
 
 " let base16colorspace=256
-set termguicolors
+" set termguicolors
