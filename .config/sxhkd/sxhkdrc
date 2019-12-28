@@ -1,2 +1,5 @@
 super + v
     i3lock -e -f -c 1d2021
+
+super + c
+    nautilus . &
