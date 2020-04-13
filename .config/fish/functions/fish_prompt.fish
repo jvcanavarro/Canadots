@@ -44,25 +44,25 @@ function fish_prompt
     if test "$USER" = root -o "$USER" = toor
         set_color -o red
     else
-        set_color -o yellow
+        set_color -o brred
     end
     echo -n cana
-    set_color -o green
-    echo -n @
-    if [ -z "$SSH_CLIENT" ]
-        set_color -o blue
-    else
-        set_color -o cyan
-    end
-    # echo -n (prompt_hostname)
-    echo -n core
-    set_color -o white
+    # set_color -o green
+    # echo -n @
+    # if [ -z "$SSH_CLIENT" ]
+    #     set_color -o blue
+    # else
+    #     set_color -o cyan
+    # end
+    # # echo -n (prompt_hostname)
+    # echo -n core
+    # set_color -o white
     # echo -n :(prompt_pwd)
-    set_color -o purple
-    set folder (string replace 'cana'  '~' (basename $PWD))
+    set_color -o brcyan
+    set folder (string replace 'cana'  '' (basename $PWD))
     echo -n " "$folder
 
-    set_color -o grey
-    echo -n ' ~ '
+    set_color -o brgrey
+    echo -n ' - '
     set_color normal
 end
