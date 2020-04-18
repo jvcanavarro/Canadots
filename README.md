@@ -12,6 +12,7 @@ My personal/professional settings, for eventual recovery or desktop replacements
 * keybindings with sxhkdrc
 * fontconfig for Arch Linux
 * profile settings: .xinitrc, .xprofile, .profile, etc.
+* Telegram Font: ttf-dejavu
 
 ### My Plugins
 
@@ -41,6 +42,7 @@ Before using Mint for almost one year, I moved to **Arch Linux** aiming at bette
 ## In Progress
 - Shell script to automatizate the pos-installation process
 - Improve README layout
+
 ## Todo
 - [ ] Configure harder tools
 - [ ] Add Desktop Wallpaper
