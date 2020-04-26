@@ -16,15 +16,15 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.zenburn_dir                               = require("awful.util").get_themes_dir() .. "zenburn"
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/steamburn"
-theme.wallpaper                                 = theme.dir .. "/wall.png"
-theme.font                                      = "Misc Tamsyn 10.5"
+theme.wallpaper                                 = "~/Pictures/Wallpapers/1074371.png"
+theme.font                                      = "Ubuntu Regular 9"
 theme.fg_normal                                 = "#e2ccb0"
 theme.fg_focus                                  = "#d88166"
-theme.fg_urgent                                 = "#CC9393"
-theme.bg_normal                                 = "#140c0b"
-theme.bg_focus                                  = "#140c0b"
-theme.bg_urgent                                 = "#2a1f1e"
-theme.border_width                              = 1
+theme.fg_urgent                                 = "#000000"
+theme.bg_normal                                 = "#000000"
+theme.bg_focus                                  = "#000000"
+theme.bg_urgent                                 = "#000000"
+theme.border_width                              = 0
 theme.border_normal                             = "#302627"
 theme.border_focus                              = "#c2745b"
 theme.border_marked                             = "#CC9393"
@@ -51,7 +51,7 @@ theme.layout_txt_magnifier                      = "[M]"
 theme.layout_txt_floating                       = "[|]"
 theme.tasklist_plain_task_name                  = true
 theme.tasklist_disable_icon                     = true
-theme.useless_gap                               = 0
+theme.useless_gap                               = 4
 theme.titlebar_close_button_normal              = theme.zenburn_dir.."/titlebar/close_normal.png"
 theme.titlebar_close_button_focus               = theme.zenburn_dir.."/titlebar/close_focus.png"
 theme.titlebar_minimize_button_normal           = theme.zenburn_dir.."/titlebar/minimize_normal.png"
@@ -246,24 +246,24 @@ function theme.at_screen_connect(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            first,
+            -- first,
             s.mytaglist,
-            spr,
-            s.mytxtlayoutbox,
-            --spr,
-            s.mypromptbox,
-            spr,
+            -- spr,
+            -- s.mytxtlayoutbox,
+            -- spr,
+            -- s.mypromptbox,
+            -- spr,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
             spr,
-            theme.mpd.widget,
+            -- theme.mpd.widget,
             --theme.mail.widget,
             cpu.widget,
             mem.widget,
-            bat.widget,
+            -- bat.widget,
             net.widget,
             theme.volume.widget,
             mytextclock

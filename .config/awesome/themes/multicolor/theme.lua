@@ -15,8 +15,8 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 local theme                                     = {}
 theme.confdir                                   = os.getenv("HOME") .. "/.config/awesome/themes/multicolor"
-theme.wallpaper                                 = "~/Pictures/1062803.png"
-theme.font                                      = "Inconsolata Regular 9"
+theme.wallpaper                                 = "~/Pictures/Wallpapers/1074371.png"
+theme.font                                      = "Ubuntu Regular 9"
 theme.menu_bg_normal                            = "#000000"
 theme.menu_bg_focus                             = "#000000"
 theme.bg_normal                                 = "#000000"
@@ -295,8 +295,7 @@ function theme.at_screen_connect(s)
             mpdicon,
             theme.mpd.widget,
         },
-        --s.mytasklist, -- Middle widget
-        nil,
+        s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
