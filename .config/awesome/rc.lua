@@ -88,7 +88,7 @@ local themes = {
 local chosen_theme = themes[9]
 local modkey       = "Mod4"
 local altkey       = "Mod1"
-local terminal     = "terminator"
+local terminal     = "kitty"
 local editor       = os.getenv("EDITOR") or "vim"
 local gui_editor   = "vim"
 local browser      = "firefox"
@@ -237,6 +237,7 @@ root.buttons(my_table.join(
     awful.button({ }, 5, awful.tag.viewprev)
 ))
 -- }}}
+
 -- {{{ Key bindings
 globalkeys = my_table.join(
     -- Take a screenshot
@@ -259,7 +260,7 @@ globalkeys = my_table.join(
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
 
-    -- Non-empty tag browsing
+              -- Non-empty tag browsing
     -- awful.key({ altkey }, "Left", function () lain.util.tag_view_nonempty(-1) end,
     --           {description = "view  previous nonempty", group = "tag"}),
     -- awful.key({ altkey }, "Right", function () lain.util.tag_view_nonempty(1) end,
@@ -564,8 +565,8 @@ clientkeys = my_table.join(
             c:raise()
         end ,
         {description = "maximize", group = "client"})
-)
 
+)
 -- Bind all key numbers to tags.
 -- Be careful: we use keycodes to make it works on any keyboard layout.
 -- This should map on the top row of your keyboard, usually 1 to 9.
@@ -775,3 +776,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- 		     opacity = 0.8 } },
 --     {
 -- }
+
+
+--Autostart apps
+awful.spawn.with_shell("picom")

@@ -16,7 +16,7 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.zenburn_dir                               = require("awful.util").get_themes_dir() .. "zenburn"
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/steamburn"
-theme.wallpaper                                 = "~/Pictures/Wallpapers/1074371.png"
+theme.wallpaper                                 = "~/.local/share/bg"
 theme.font                                      = "Ubuntu Regular 9"
 theme.fg_normal                                 = "#e2ccb0"
 theme.fg_focus                                  = "#d88166"
@@ -51,7 +51,7 @@ theme.layout_txt_magnifier                      = "[M]"
 theme.layout_txt_floating                       = "[|]"
 theme.tasklist_plain_task_name                  = true
 theme.tasklist_disable_icon                     = true
-theme.useless_gap                               = 4
+theme.useless_gap                               = 3
 theme.titlebar_close_button_normal              = theme.zenburn_dir.."/titlebar/close_normal.png"
 theme.titlebar_close_button_focus               = theme.zenburn_dir.."/titlebar/close_focus.png"
 theme.titlebar_minimize_button_normal           = theme.zenburn_dir.."/titlebar/minimize_normal.png"
@@ -254,7 +254,8 @@ function theme.at_screen_connect(s)
             -- s.mypromptbox,
             -- spr,
         },
-        s.mytasklist, -- Middle widget
+        -- s.mytasklist, -- Middle widget
+        spr,
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
