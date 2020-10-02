@@ -6,3 +6,4 @@
 # set fish_greeting
 
 alias py="python3.7"
+alias icat="kitty +kitten icat"

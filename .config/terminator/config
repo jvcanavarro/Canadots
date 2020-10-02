@@ -3,6 +3,40 @@
   suppress_multiple_term_dialog = True
 [keybindings]
   split_vert = <Primary><Shift>k
+[profiles]
+  [[default]]
+    background_darkness = 0.75
+    background_type = transparent
+    cursor_blink = False
+    cursor_color = "#ef2929"
+    font = JetBrains Mono 11
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#151515:#b44242:#e8e85a:#95a328:#76c39b:#7c435a:#ceb34f:#c2c2b0:#3f3639:#dc7671:#a48b4a:#9e9052:#60928f:#86596c:#95a328:#b0afa8"
+    use_system_font = False
+  [[Tomorrow Night Bright]]
+    background_darkness = 0.75
+    cursor_blink = False
+    cursor_color = "#eaeaea"
+    font = Ligconsolata 13
+    foreground_color = "#eaeaea"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#000000:#d54e53:#b9ca4a:#e7c547:#7aa6da:#c397d8:#70c0b1:#ffffff:#000000:#d54e53:#b9ca4a:#e7c547:#7aa6da:#c397d8:#70c0b1:#ffffff"
+    use_system_font = False
+    copy_on_selection = True
+  [[Twilight]]
+    background_color = "#141414"
+    background_darkness = 0.75
+    cursor_blink = False
+    cursor_color = "#ffffff"
+    font = Ligconsolata 13
+    foreground_color = "#ffffd4"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#141414:#c06d44:#afb97a:#c2a86c:#44474a:#b4be7c:#778385:#ffffd4:#262626:#de7c4c:#ccd88c:#e2c47e:#5a5e62:#d0dc8e:#8a989b:#ffffd4"
+    use_system_font = False
+    copy_on_selection = True
 [layouts]
   [[default]]
     [[[child1]]]
@@ -12,14 +46,3 @@
       parent = ""
       type = Window
 [plugins]
-[profiles]
-  [[default]]
-    background_darkness = 0.75
-    copy_on_selection = True
-    cursor_blink = False
-    cursor_color = "#ef2929"
-    font = Inconsolata Nerd Font 13
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False
