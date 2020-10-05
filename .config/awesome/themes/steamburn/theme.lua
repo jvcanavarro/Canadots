@@ -254,8 +254,8 @@ function theme.at_screen_connect(s)
             -- s.mypromptbox,
             -- spr,
         },
-        -- s.mytasklist, -- Middle widget
-        spr,
+        s.mytasklist, -- Middle widget
+        -- spr,
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),

@@ -1,42 +1,36 @@
 [global_config]
+  handle_size = 8
   borderless = True
+  extra_styling = False
   suppress_multiple_term_dialog = True
 [keybindings]
   split_vert = <Primary><Shift>k
 [profiles]
   [[default]]
-    background_darkness = 0.75
+    background_darkness = 0.8
     background_type = transparent
     cursor_blink = False
-    cursor_color = "#ef2929"
-    font = JetBrains Mono 11
+    cursor_color = "#ebdbb2"
+    cursor_color_fg = False
+    font = Ligconsolata 13
     show_titlebar = False
     scrollbar_position = hidden
-    palette = "#151515:#b44242:#e8e85a:#95a328:#76c39b:#7c435a:#ceb34f:#c2c2b0:#3f3639:#dc7671:#a48b4a:#9e9052:#60928f:#86596c:#95a328:#b0afa8"
+    palette = "#282a2e:#a54242:#8c9440:#de935f:#5f819d:#85678f:#5e8d87:#707880:#373b41:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#c5c8c6"
     use_system_font = False
+    copy_on_selection = True
+  [[Gruvbox]]
+    background_darkness = 0.8
+    background_type = transparent
+    cursor_blink = False
+    cursor_color = "#ebdbb2"
+    cursor_color_fg = False
+    font = Ligconsolata 13
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
+    use_system_font = False
+    copy_on_selection = True
   [[Tomorrow Night Bright]]
-    background_darkness = 0.75
-    cursor_blink = False
-    cursor_color = "#eaeaea"
-    font = Ligconsolata 13
-    foreground_color = "#eaeaea"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#000000:#d54e53:#b9ca4a:#e7c547:#7aa6da:#c397d8:#70c0b1:#ffffff:#000000:#d54e53:#b9ca4a:#e7c547:#7aa6da:#c397d8:#70c0b1:#ffffff"
-    use_system_font = False
-    copy_on_selection = True
-  [[Twilight]]
-    background_color = "#141414"
-    background_darkness = 0.75
-    cursor_blink = False
-    cursor_color = "#ffffff"
-    font = Ligconsolata 13
-    foreground_color = "#ffffd4"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#141414:#c06d44:#afb97a:#c2a86c:#44474a:#b4be7c:#778385:#ffffd4:#262626:#de7c4c:#ccd88c:#e2c47e:#5a5e62:#d0dc8e:#8a989b:#ffffd4"
-    use_system_font = False
-    copy_on_selection = True
 [layouts]
   [[default]]
     [[[child1]]]

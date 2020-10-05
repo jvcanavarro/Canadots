@@ -85,10 +85,10 @@ local themes = {
     "vertex",          -- 10
 }
 
-local chosen_theme = themes[9]
+local chosen_theme = themes[6]
 local modkey       = "Mod4"
 local altkey       = "Mod1"
-local terminal     = "kitty"
+local terminal     = "terminator --profile=Gruvbox"
 local editor       = os.getenv("EDITOR") or "vim"
 local gui_editor   = "vim"
 local browser      = "firefox"
