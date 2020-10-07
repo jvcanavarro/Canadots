@@ -16,15 +16,15 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow"
 theme.wallpaper                                 = "~/.local/share/bg"
-theme.font                                      = "Inconsolata Regular 8"
+theme.font                                      = "JetbrainsMono Regular 8"
 theme.fg_normal                                 = "#FEFEFE"
 theme.fg_focus                                  = "#de935f"
 theme.fg_urgent                                 = "#a54242"
-theme.bg_normal                                 = "#1d1f21"
-theme.bg_focus                                  = "#1d1f21"
-theme.bg_urgent                                 = "#1d1f21"
+theme.bg_normal                                 = "#282828"
+theme.bg_focus                                  = "#282828"
+theme.bg_urgent                                 = "#282828"
 theme.taglist_fg_focus                          = "#de935f"
-theme.tasklist_bg_focus                         = "#1d1f21"
+theme.tasklist_bg_focus                         = "#282828"
 theme.tasklist_fg_focus                         = "#c5c8c6"
 theme.border_width                              = 0
 theme.border_normal                             = "#3F3F3F"
@@ -123,7 +123,7 @@ theme.cal = lain.widget.cal({
     --cal = "cal --color=always",
     attach_to = { clock},
     notification_preset = {
-        font = "Inconsolata Regular 9",
+        font = "Source Code Pro Regular 9",
         fg   = theme.fg_normal,
         bg   = theme.bg_normal
     }
@@ -363,13 +363,13 @@ function theme.at_screen_connect(s)
             -- pl(wibox.widget { mpdicon, theme.mpd.widget, layout = wibox.layout.align.horizontal }, "#707880"),
             -- pl(task, "#343434"),
             --pl(wibox.widget { mailicon, mail and theme.mail.widget, layout = wibox.layout.align.horizontal }, "#343434"),
-            pl(wibox.widget { memicon, mem.widget, layout = wibox.layout.align.horizontal }, "#707880"),
-            -- pl(wibox.widget { cpuicon, cpu.widget, layout = wibox.layout.align.horizontal }, "#5e8d87"),
-            pl(wibox.widget { tempicon, temp.widget, layout = wibox.layout.align.horizontal }, "#5e8d87"),
+            pl(wibox.widget { memicon, mem.widget, layout = wibox.layout.align.horizontal }, "#928374"),
+            pl(wibox.widget { cpuicon, cpu.widget, layout = wibox.layout.align.horizontal }, "#d79921"),
+            -- pl(wibox.widget { tempicon, temp.widget, layout = wibox.layout.align.horizontal }, "#d79921"),
             --pl(wibox.widget { fsicon, theme.fs and theme.fs.widget, layout = wibox.layout.align.horizontal }, "#CB755B"),
             -- pl(wibox.widget { baticon, bat.widget, layout = wibox.layout.align.horizontal }, "#8DAA9A"),
-            pl(wibox.widget { neticon, net.widget, layout = wibox.layout.align.horizontal }, "#85678f"),
-            pl(clock, "#5f819d"),
+            pl(wibox.widget { neticon, net.widget, layout = wibox.layout.align.horizontal }, "#98971a"),
+            pl(clock, "#fb4934"),
   
             -- Cursed 
 

@@ -90,9 +90,9 @@ local modkey       = "Mod4"
 local altkey       = "Mod1"
 local terminal     = "terminator --profile=Gruvbox"
 local editor       = os.getenv("EDITOR") or "vim"
-local gui_editor   = "vim"
+local gui_editor   = "subl"
 local browser      = "firefox"
-local guieditor    = "vim"
+local guieditor    = "subl"
 local scrlocker    = "slock"
 
 awful.util.terminal = terminal
