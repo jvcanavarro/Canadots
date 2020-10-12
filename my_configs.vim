@@ -1,11 +1,13 @@
-" Plugins -> Supertab, Jedi, Fireplace, Vimtex, Polyglot, Awesome Colorschemes
+" Plugins -> Supertab, Jedi, Fireplace, Vimtex + LatexMK, Polyglot
 
 " Python -> Flake8, Yapf
 
 " Remove Lightline, Tabline from Sources, Goyo and Zenroom.
 
-syntax enable
 
+" Basic
+syntax enable
+filetype plugin on
 set number
 set nowrap
 set expandtab
@@ -16,24 +18,31 @@ set showtabline=0
 " set colorcolumn=80
 " set cursorline
 
+" Disables automatic commenting on newline:
 autocmd FileType * setlocal formatoptions-= formatoptions-=r formatoptions-=o
 
-nnoremap j gj
-nnoremap k gk
 
-nnoremap o o<Esc>
-
-"split navigations
+" Split Navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+
+" Some Remaps
 nnoremap <esc><esc> :noh<return>
+nnoremap o o<Esc>
+" nnoremap j gj
+" nnoremap k gk
+
+" Automatically deletes all trailing whitespace and newlines at end of file on save.
+autocmd BufWritePre * %s/\s\+$//e
+autocmd BufWritepre * %s/\n\+\%$//e
 
 
+" Airline Themes
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 " let g:airline_theme = 'minimalist'
 
 "Python
@@ -49,7 +58,6 @@ au BufNewFile,BufRead *.py
 nnoremap <silent> <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr><cr>
 
 " Jedi
-
 " autocmd FileType python setlocal completeopt-=preview
 let g:jedi#popup_on_dot = 0
 
@@ -70,51 +78,24 @@ highlight clear ALEErrorSign
 highlight clear ALEWarningSign
 
 "Polyglot
-let g:polyglot_disabled = ['latex']
+" let g:polyglot_disabled = ['latex']
 
-"""LATEX
-" Word count:
-autocmd FileType tex map <leader>w :w !detex \| wc -w<CR>
-" Code snippets
-autocmd FileType tex inoremap ,fr \begin{frame}<Enter>\frametitle{}<Enter><Enter><++><Enter><Enter>\end{frame}<Enter><Enter><++><Esc>6kf}i
-autocmd FileType tex inoremap ,fi \begin{fitch}<Enter><Enter>\end{fitch}<Enter><Enter><++><Esc>3kA
-autocmd FileType tex inoremap ,exe \begin{exe}<Enter>\ex<Space><Enter>\end{exe}<Enter><Enter><++><Esc>3kA
-autocmd FileType tex inoremap ,em \emph{}<++><Esc>T{i
-autocmd FileType tex inoremap ,bf \textbf{}<++><Esc>T{i
-autocmd FileType tex vnoremap , <ESC>`<i\{<ESC>`>2la}<ESC>?\\{<Enter>a
-autocmd FileType tex inoremap ,it \textit{}<++><Esc>T{i
-autocmd FileType tex inoremap ,ct \textcite{}<++><Esc>T{i
-autocmd FileType tex inoremap ,cp \parencite{}<++><Esc>T{i
-autocmd FileType tex inoremap ,glos {\gll<Space><++><Space>\\<Enter><++><Space>\\<Enter>\trans{``<++>''}}<Esc>2k2bcw
-autocmd FileType tex inoremap ,x \begin{xlist}<Enter>\ex<Space><Enter>\end{xlist}<Esc>kA<Space>
-autocmd FileType tex inoremap ,ol \begin{enumerate}<Enter><Enter>\end{enumerate}<Enter><Enter><++><Esc>3kA\item<Space>
-autocmd FileType tex inoremap ,ul \begin{itemize}<Enter><Enter>\end{itemize}<Enter><Enter><++><Esc>3kA\item<Space>
-autocmd FileType tex inoremap ,li <Enter>\item<Space>
-autocmd FileType tex inoremap ,ref \ref{}<Space><++><Esc>T{i
-autocmd FileType tex inoremap ,tab \begin{tabular}<Enter><++><Enter>\end{tabular}<Enter><Enter><++><Esc>4kA{}<Esc>i
-autocmd FileType tex inoremap ,ot \begin{tableau}<Enter>\inp{<++>}<Tab>\const{<++>}<Tab><++><Enter><++><Enter>\end{tableau}<Enter><Enter><++><Esc>5kA{}<Esc>i
-autocmd FileType tex inoremap ,can \cand{}<Tab><++><Esc>T{i
-autocmd FileType tex inoremap ,con \const{}<Tab><++><Esc>T{i
-autocmd FileType tex inoremap ,v \vio{}<Tab><++><Esc>T{i
-autocmd FileType tex inoremap ,a \href{}{<++>}<Space><++><Esc>2T{i
-autocmd FileType tex inoremap ,sc \textsc{}<Space><++><Esc>T{i
-autocmd FileType tex inoremap ,chap \chapter{}<Enter><Enter><++><Esc>2kf}i
-autocmd FileType tex inoremap ,sec \section{}<Enter><Enter><++><Esc>2kf}i
-autocmd FileType tex inoremap ,ssec \subsection{}<Enter><Enter><++><Esc>2kf}i
-autocmd FileType tex inoremap ,sssec \subsubsection{}<Enter><Enter><++><Esc>2kf}i
-autocmd FileType tex inoremap ,st <Esc>F{i*<Esc>f}i
-autocmd FileType tex inoremap ,beg \begin{DELRN}<Enter><++><Enter>\end{DELRN}<Enter><Enter><++><Esc>4k0fR:MultipleCursorsFind<Space>DELRN<Enter>c
-autocmd FileType tex inoremap ,up <Esc>/usepackage<Enter>o\usepackage{}<Esc>i
-autocmd FileType tex nnoremap ,up /usepackage<Enter>o\usepackage{}<Esc>i
-autocmd FileType tex inoremap ,tt \texttt{}<Space><++><Esc>T{i
-autocmd FileType tex inoremap ,bt {\blindtext}
-autocmd FileType tex inoremap ,nu $\varnothing$
-autocmd FileType tex inoremap ,col \begin{columns}[T]<Enter>\begin{column}{.5\textwidth}<Enter><Enter>\end{column}<Enter>\begin{column}{.5\textwidth}<Enter><++><Enter>\end{column}<Enter>\end{columns}<Esc>5kA
-autocmd FileType tex inoremap ,rn (\ref{})<++><Esc>F}i
+"Latex
+let g:tex_flavor = 'latex'
+let g:Tex_Diacritics = 1
 
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_CompileRule_pdf = 'latexmk -pdf -f $*'
+" imap <C-space> <Plug>IMAP_JumpForward
+" let g:Tex_MultipleCompileFormats = 'pdf'
+
+autocmd FileChangedShell * echohl WarningMsg | echo "File changed shell." | echohl None
+
+" Compile and Clean Latex Logfiles
+map <leader>c :w! \| !compiler <c-r>%<CR>
 autocmd VimLeave *.tex !texclear %
 
-"MARKDOWN
+"Markdown
 autocmd Filetype markdown,rmd map <leader>w yiWi[<esc>Ea](<esc>pa)
 autocmd Filetype markdown,rmd inoremap ,n ---<Enter><Enter>
 autocmd Filetype markdown,rmd inoremap ,b ****<++><Esc>F*hi
@@ -141,18 +122,21 @@ set background=dark
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_contrast_light = 'soft'
 
-" colorscheme gruvbox
-colorscheme solarized
+colorscheme gruvbox
+" colorscheme solarized
 
 hi Error NONE
 hi ErrorMsg NONE
+
 " hi Comment cterm=italic
 " hi Comment guifg=#5C6370 ctermfg=59
 
-" hi Normal     ctermbg=NONE guibg=NONE
-" hi LineNr     ctermbg=NONE guibg=NONE
-" hi SignColumn ctermbg=NONE guibg=NONE
+hi Normal     ctermbg=NONE guibg=NONE
+hi LineNr     ctermbg=NONE guibg=NONE
+hi SignColumn ctermbg=NONE guibg=NONE
 
+
+" Hide Statusbar
 let s:hidden_all = 0
 function! ToggleHiddenAll()
     if s:hidden_all  == 0
@@ -173,5 +157,5 @@ endfunction
 
 nnoremap <S-h> :call ToggleHiddenAll()<CR>
 
-" let base16colorspace=256
+let base16colorspace=256
 " set termguicolors

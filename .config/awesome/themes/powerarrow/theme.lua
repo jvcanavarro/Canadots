@@ -20,9 +20,9 @@ theme.font                                      = "JetbrainsMono Regular 8"
 theme.fg_normal                                 = "#FEFEFE"
 theme.fg_focus                                  = "#de935f"
 theme.fg_urgent                                 = "#a54242"
-theme.bg_normal                                 = "#282828"
-theme.bg_focus                                  = "#282828"
-theme.bg_urgent                                 = "#282828"
+theme.bg_normal                                 = "#202020"
+theme.bg_focus                                  = "#202020"
+theme.bg_urgent                                 = "#202020"
 theme.taglist_fg_focus                          = "#de935f"
 theme.tasklist_bg_focus                         = "#282828"
 theme.tasklist_fg_focus                         = "#c5c8c6"
@@ -63,7 +63,7 @@ theme.widget_temp                               = theme.dir .. "/icons/temp.png"
 theme.widget_net                                = theme.dir .. "/icons/net.png"
 theme.widget_hdd                                = theme.dir .. "/icons/hdd.png"
 theme.widget_music                              = theme.dir .. "/icons/note.png"
-theme.widget_music_on                           = theme.dir .. "/icons/note_on.png"
+theme.widget_music_on                           = theme.dir .. "/icons/note.png"
 theme.widget_music_pause                        = theme.dir .. "/icons/pause.png"
 theme.widget_music_stop                         = theme.dir .. "/icons/stop.png"
 theme.widget_vol                                = theme.dir .. "/icons/vol.png"
@@ -99,8 +99,27 @@ theme.titlebar_maximized_button_normal_inactive = theme.dir .. "/icons/titlebar/
 local markup = lain.util.markup
 local separators = lain.util.separators
 
--- Text clock
--- local clock = wibox.widget.textclock(" %H:%M ")
+-- cmus audio player
+local cmus, cmus_timer = awful.widget.watch(
+    "cmus-remote -Q",
+    2,
+    function(widget, stdout)
+        local cmus_now = {
+            state   = "N/A",
+            artist  = "N/A",
+            title   = "N/A",
+            album   = "N/A"
+        }
+
+        for w in string.gmatch(stdout, "(.-)tag") do
+            a, b = w:match("(%w+) (.-)\n")
+            cmus_now[a] = b
+        end
+
+        -- customize here
+        widget:set_text(cmus_now.artist .. " - " .. cmus_now.title)
+    end
+)
 
 local clock = awful.widget.watch(
     "date +'%a %d %b %R'", 60,
@@ -171,29 +190,29 @@ theme.volume = lain.widget.alsabar({
 -- MPD
 local musicplr = awful.util.terminal .. " -title Music -g 130x34-320+16 -e ncmpcpp"
 local mpdicon = wibox.widget.imagebox(theme.widget_music)
-mpdicon:buttons(my_table.join(
-    awful.button({ modkey }, 1, function () awful.spawn.with_shell(musicplr) end),
-    awful.button({ }, 1, function ()
-        os.execute("mpc prev")
-        theme.mpd.update()
-    end),
-    awful.button({ }, 2, function ()
-        os.execute("mpc toggle")
-        theme.mpd.update()
-    end),
-    awful.button({ }, 3, function ()
-        os.execute("mpc next")
-        theme.mpd.update()
-    end)))
+-- mpdicon:buttons(my_table.join(
+--     awful.button({ modkey }, 1, function () awful.spawn.with_shell(musicplr) end),
+--     awful.button({ }, 1, function ()
+--         os.execute("mpc prev")
+--         theme.mpd.update()
+--     end),
+--     awful.button({ }, 2, function ()
+--         os.execute("mpc toggle")
+--         theme.mpd.update()
+--     end),
+--     awful.button({ }, 3, function ()
+--         os.execute("mpc next")
+--         theme.mpd.update()
+--     end)))
 theme.mpd = lain.widget.mpd({
     settings = function()
         if mpd_now.state == "play" then
             artist = " " .. mpd_now.artist .. " "
             title  = mpd_now.title  .. " "
             mpdicon:set_image(theme.widget_music_on)
-            widget:set_markup(markup.font(theme.font, markup("#FF8466", artist) .. " " .. title))
+            widget:set_markup(markup.font(theme.font, artist .. "- " .. title))
         elseif mpd_now.state == "pause" then
-            widget:set_markup(markup.font(theme.font, " mpd paused "))
+            widget:set_text("")
             mpdicon:set_image(theme.widget_music_pause)
         else
             widget:set_text("")
@@ -355,15 +374,16 @@ function theme.at_screen_connect(s)
         spr,
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            -- wibox.widget.systray(),
+            pl(wibox.widget.systray()),
             -- wibox.container.margin(scissors, 4, 8),
 
             -- Gruvbox
 
-            -- pl(wibox.widget { mpdicon, theme.mpd.widget, layout = wibox.layout.align.horizontal }, "#707880"),
+            pl(wibox.widget { mpdicon, theme.mpd.widget, layout = wibox.layout.align.horizontal }, "#86596c"),
             -- pl(task, "#343434"),
             --pl(wibox.widget { mailicon, mail and theme.mail.widget, layout = wibox.layout.align.horizontal }, "#343434"),
-            pl(wibox.widget { memicon, mem.widget, layout = wibox.layout.align.horizontal }, "#928374"),
+            -- pl(cmus, "#111111"),
+            pl(wibox.widget { memicon, mem.widget, layout = wibox.layout.align.horizontal }, "#60928f"),
             pl(wibox.widget { cpuicon, cpu.widget, layout = wibox.layout.align.horizontal }, "#d79921"),
             -- pl(wibox.widget { tempicon, temp.widget, layout = wibox.layout.align.horizontal }, "#d79921"),
             --pl(wibox.widget { fsicon, theme.fs and theme.fs.widget, layout = wibox.layout.align.horizontal }, "#CB755B"),
