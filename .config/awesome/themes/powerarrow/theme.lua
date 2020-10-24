@@ -379,31 +379,19 @@ function theme.at_screen_connect(s)
 
             -- Gruvbox
 
-            pl(wibox.widget { mpdicon, theme.mpd.widget, layout = wibox.layout.align.horizontal }, "#86596c"),
+            pl(wibox.widget { mpdicon, theme.mpd.widget, layout = wibox.layout.align.horizontal }, "#60928f"),
             -- pl(task, "#343434"),
             --pl(wibox.widget { mailicon, mail and theme.mail.widget, layout = wibox.layout.align.horizontal }, "#343434"),
             -- pl(cmus, "#111111"),
-            pl(wibox.widget { memicon, mem.widget, layout = wibox.layout.align.horizontal }, "#60928f"),
-            pl(wibox.widget { cpuicon, cpu.widget, layout = wibox.layout.align.horizontal }, "#d79921"),
+            pl(wibox.widget { memicon, mem.widget, layout = wibox.layout.align.horizontal }, "#d79921"),
+            -- pl(wibox.widget { cpuicon, cpu.widget, layout = wibox.layout.align.horizontal }, "#d79921"),
             -- pl(wibox.widget { tempicon, temp.widget, layout = wibox.layout.align.horizontal }, "#d79921"),
             --pl(wibox.widget { fsicon, theme.fs and theme.fs.widget, layout = wibox.layout.align.horizontal }, "#CB755B"),
             -- pl(wibox.widget { baticon, bat.widget, layout = wibox.layout.align.horizontal }, "#8DAA9A"),
             pl(wibox.widget { neticon, net.widget, layout = wibox.layout.align.horizontal }, "#98971a"),
             pl(clock, "#fb4934"),
-  
-            -- Cursed 
 
-            -- pl(wibox.widget { mpdicon, theme.mpd.widget, layout = wibox.layout.align.horizontal }, "#707880"),
-            -- pl(task, "#343434"),
-            --pl(wibox.widget { mailicon, mail and theme.mail.widget, layout = wibox.layout.align.horizontal }, "#343434"),
-            -- pl(wibox.widget { memicon, mem.widget, layout = wibox.layout.align.horizontal }, "#707880"),
-            -- pl(wibox.widget { cpuicon, cpu.widget, layout = wibox.layout.align.horizontal }, "#5e8d87"),
-            -- pl(wibox.widget { tempicon, temp.widget, layout = wibox.layout.align.horizontal }, "#5e8d87"),
-            --pl(wibox.widget { fsicon, theme.fs and theme.fs.widget, layout = wibox.layout.align.horizontal }, "#CB755B"),
-            -- pl(wibox.widget { baticon, bat.widget, layout = wibox.layout.align.horizontal }, "#8DAA9A"),
-            -- pl(wibox.widget { neticon, net.widget, layout = wibox.layout.align.horizontal }, "#85678f"),
-            -- pl(clock, "#5f819d"),
-  
+
             -- using separators
             -- arrow(theme.bg_normal, "#343434"),
             -- wibox.container.background(wibox.container.margin(wibox.widget { mailicon, theme.mail and theme.mail.widget, layout = wibox.layout.align.horizontal }, 4, 7), "#343434"),

@@ -91,9 +91,9 @@ local altkey       = "Mod1"
 -- local terminal     = "terminator --profile=Gruvbox"
 local terminal     = "kitty"
 local editor       = os.getenv("EDITOR") or "vim"
-local gui_editor   = "subl3"
+local gui_editor   = "code"
 local browser      = "firefox"
-local guieditor    = "subl3"
+local guieditor    = "code"
 local scrlocker    = "slock"
 
 awful.util.terminal = terminal
@@ -415,13 +415,17 @@ globalkeys = my_table.join(
     -- ALSA volume control
     awful.key({ altkey }, "Up",
         function ()
-            os.execute(string.format("amixer -q set %s 1%%+", beautiful.volume.channel))
+            -- os.execute(string.format("amixer -q set %s 1%%+", beautiful.volume.channel))
+            -- beautiful.volume.update()
+            awful.util.spawn_with_shell("pactl -- set-sink-volume 1 +5%")
             beautiful.volume.update()
         end,
         {description = "volume up", group = "hotkeys"}),
     awful.key({ altkey }, "Down",
         function ()
-            os.execute(string.format("amixer -q set %s 1%%-", beautiful.volume.channel))
+            -- os.execute(string.format("amixer -q set %s 1%%-", beautiful.volume.channel))
+            -- beautiful.volume.update()
+            awful.util.spawn_with_shell("pactl -- set-sink-volume 1 -5%")
             beautiful.volume.update()
         end,
         {description = "volume down", group = "hotkeys"}),
