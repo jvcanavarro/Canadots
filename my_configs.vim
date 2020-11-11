@@ -1,4 +1,4 @@
-" Plugins -> Supertab, Jedi, Fireplace, Vimtex + LatexMK, Polyglot
+" Plugins -> Jedi, Fireplace, Latex-Suite + pdfLatex, Polyglot
 
 " Python -> Flake8, Yapf
 
@@ -9,14 +9,15 @@
 syntax enable
 filetype plugin on
 set number
-set nowrap
+set wrap
 set expandtab
-set nocompatible
 set foldcolumn=0
 set laststatus=0
 set showtabline=0
+set clipboard =unnamedplus
 " set colorcolumn=80
 " set cursorline
+
 
 " Disables automatic commenting on newline:
 autocmd FileType * setlocal formatoptions-= formatoptions-=r formatoptions-=o
@@ -32,8 +33,8 @@ nnoremap <C-H> <C-W><C-H>
 " Some Remaps
 nnoremap <esc><esc> :noh<return>
 nnoremap o o<Esc>
-" nnoremap j gj
-" nnoremap k gk
+nnoremap j gj
+nnoremap k gk
 
 " Automatically deletes all trailing whitespace and newlines at end of file on save.
 autocmd BufWritePre * %s/\s\+$//e
@@ -46,16 +47,14 @@ let g:airline#extensions#tabline#enabled = 0
 " let g:airline_theme = 'minimalist'
 
 "Python
-au BufNewFile,BufRead *.py
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 |
-    \ set textwidth=79 |
-    \ set expandtab |
-    \ set autoindent |
-    \ set fileformat=unix
-
-nnoremap <silent> <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr><cr>
+" au BufNewFile,BufRead *.py
+"     \ set tabstop=4 |
+"     \ set softtabstop=4 |
+"     \ set shiftwidth=4 |
+"     \ set textwidth=79 |
+"     \ set expandtab |
+"     \ set autoindent |
+"     \ set fileformat=unix
 
 " Jedi
 " autocmd FileType python setlocal completeopt-=preview
@@ -77,8 +76,14 @@ let g:ale_fixers = {
 highlight clear ALEErrorSign
 highlight clear ALEWarningSign
 
+
 "Polyglot
 " let g:polyglot_disabled = ['latex']
+
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+
 
 "Latex
 let g:tex_flavor = 'latex'
@@ -86,10 +91,13 @@ let g:Tex_Diacritics = 1
 
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_CompileRule_pdf = 'latexmk -pdf -f $*'
-" imap <C-space> <Plug>IMAP_JumpForward
 " let g:Tex_MultipleCompileFormats = 'pdf'
 
 autocmd FileChangedShell * echohl WarningMsg | echo "File changed shell." | echohl None
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
 " Compile and Clean Latex Logfiles
 map <leader>c :w! \| !compiler <c-r>%<CR>
@@ -115,15 +123,12 @@ autocmd Filetype rmd inoremap ,c ```<cr>```<cr><cr><esc>2kO
 " autocmd BufWritePost *.md silent !pandoc % -t beamer -o %:r.pdf
 
 
-
 set background=dark
-" set background=light
 
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_contrast_light = 'soft'
 
 colorscheme gruvbox
-" colorscheme solarized
 
 hi Error NONE
 hi ErrorMsg NONE
