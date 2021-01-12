@@ -1,19 +1,12 @@
 #!/usr/bin/env sh
 
+nvidia-settings --load-config-only
+xrandr --output DP-0 --mode 1920x1080 --rate 75.0
 # setbg &		# Set the background
 sxhkd &	# Bind keys
-# Switch to US international with Caps as Mod/Escape
-# setxkbmap -option caps:super -variant altgr-intl && killall xcape 2>/dev/null ; xcape -e 'Super_L=Escape' &
-# Properties button extra Mod/Escape
-# xmodmap -e 'keycode 135 = Super_R' &
-setxkbmap -model abnt2 -layout br -variant abnt2
-xset r rate 300 90 &	# Speed xrate up
-xsetwacom set "Wacom Intuos S 2 Pen stylus" Button 1 "0" &
+# setxkbmap -model abnt2 -layout br -variant abnt2
+xset r rate 300 80 &	# Speed xrate up
+# xsetwacom set "Wacom Intuos S 2 Pen stylus" Button 1 "0" &
 unclutter &		# Remove mouse when idle
-# xcompmgr &		# xcompmgr for transparency
-# picom &
-# killall picom
-# dunst &			# dunst for notifications
-[ ! -s ~/.config/mpd/pid ] && mpd
-mpdupdate &
+xcompmgr &		# xcompmgr for transparency
 # sdr_spew_level 0;net_droponsendoverflow 1;net_client_steamdatagram_enable_override 1
