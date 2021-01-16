@@ -138,15 +138,15 @@ local binclock = require("themes.powerarrow.binclock"){
 }
 
 -- Calendar
-theme.cal = lain.widget.cal({
-    --cal = "cal --color=always",
-    attach_to = { clock},
-    notification_preset = {
-        font = "Source Code Pro Regular 9",
-        fg   = theme.fg_normal,
-        bg   = theme.bg_normal
-    }
-})
+-- theme.cal = lain.widget.cal({
+--     cal = "cal --color=always",
+--     attach_to = { clock},
+--     notification_preset = {
+--         font = "Source Code Pro Regular 9",
+--         fg   = theme.fg_normal,
+--         bg   = theme.bg_normal
+--     }
+-- })
 
 -- Taskwarrior
 local task = wibox.widget.imagebox(theme.widget_task)
