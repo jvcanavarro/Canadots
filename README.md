@@ -5,14 +5,14 @@ My personal/professional settings, for eventual recovery or desktop replacements
 * fish
 * bashrc
 * ranger
-* terminator
-* awesome-wm, i3-gaps
+* zathura
+* terminal: kitty & terminator
+* awesome-wm, i3-lock
 * vimrc, my_configs.vim
-* compton, compton-tryone
+* compton & picom
 * keybindings with sxhkdrc
 * fontconfig for Arch Linux
 * profile settings: .xinitrc, .xprofile, .profile, etc.
-* Telegram Font: ttf-dejavu
 
 ### My Plugins
 
@@ -36,7 +36,6 @@ Before using Mint for almost one year, I moved to **Arch Linux** aiming at bette
 
 ## Done
 - [x] Organize simplest configs
-- [x] Integration of Luke Smith LARBS and my settings
 - [x] List used vim plugins
 
 ## In Progress
