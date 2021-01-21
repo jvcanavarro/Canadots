@@ -43,10 +43,8 @@ Before using Mint for almost one year, I moved to **Arch Linux** aiming at bette
 - Improve README layout
 
 ## Todo
-- [ ] Configure harder tools
 - [ ] Add Desktop Wallpaper
 - [ ] Add cited plugins references
-- [ ] Syncronize Home and Internship configurations
 
 ## Warnings
 This repository is in development, do not try to run the installation script without previous revision.
