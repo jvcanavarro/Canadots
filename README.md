@@ -45,6 +45,3 @@ Before using Mint for almost one year, I moved to **Arch Linux** aiming at bette
 ## Todo
 - [ ] Add Desktop Wallpaper
 - [ ] Add cited plugins references
-
-## Warnings
-This repository is in development, do not try to run the installation script without previous revision.
