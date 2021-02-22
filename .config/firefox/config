@@ -1,0 +1,2 @@
+gfx.webrender.all = True
+layers.acceleration.force-enabled = True
