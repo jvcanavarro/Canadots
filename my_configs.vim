@@ -44,7 +44,7 @@ autocmd BufWritepre * %s/\n\+\%$//e
 " Airline Themes
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 0
-" let g:airline_theme = 'minimalist'
+let g:airline_theme = 'minimalist'
 
 "Python
 " au BufNewFile,BufRead *.py
@@ -120,7 +120,9 @@ autocmd Filetype rmd inoremap ,r ```{r}<CR>```<CR><CR><esc>2kO
 autocmd Filetype rmd inoremap ,p ```{python}<CR>```<CR><CR><esc>2kO
 autocmd Filetype rmd inoremap ,c ```<cr>```<cr><cr><esc>2kO
 
-" autocmd BufWritePost *.md silent !pandoc % -t beamer -o %:r.pdf
+" Cpp compiling
+nnoremap <silent> <F8> :w <CR> :!g++ -std=c++17 % -o %< -Wall -Wshadow -O2 -Wno-unused-result && ./%< <CR>
+nnoremap <F9> :w <CR> :!g++ -std=c++17 -Wshadow -Wall % -o %< -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG && ./%< <CR>
 
 
 set background=dark
@@ -128,7 +130,7 @@ set background=dark
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_contrast_light = 'soft'
 
-colorscheme gruvbox
+colorscheme koehler
 
 hi Error NONE
 hi ErrorMsg NONE
