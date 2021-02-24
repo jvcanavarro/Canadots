@@ -44,7 +44,7 @@ autocmd BufWritepre * %s/\n\+\%$//e
 " Airline Themes
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 0
-let g:airline_theme = 'minimalist'
+" let g:airline_theme = 'minimalist'
 
 "Python
 " au BufNewFile,BufRead *.py
@@ -121,8 +121,8 @@ autocmd Filetype rmd inoremap ,p ```{python}<CR>```<CR><CR><esc>2kO
 autocmd Filetype rmd inoremap ,c ```<cr>```<cr><cr><esc>2kO
 
 " Cpp compiling
-nnoremap <silent> <F8> :w <CR> :!g++ -std=c++17 % -o %< -Wall -Wshadow -O2 -Wno-unused-result && ./%< <CR>
-nnoremap <F9> :w <CR> :!g++ -std=c++17 -Wshadow -Wall % -o %< -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG && ./%< <CR>
+nnoremap <silent> <F8> :w <CR> :!g++ -std=c++17 % -o %< -Wall -Wshadow -Wextra -O2 -Wno-unused-result && ./%< <CR>
+nnoremap <silent> <F9> :w <CR> :!g++ -std=c++17 -Wshadow -Wall % -o %< -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG && ./%< <CR>
 
 
 set background=dark
