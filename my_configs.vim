@@ -1,13 +1,6 @@
-" Plugins -> Jedi, Fireplace, Latex-Suite + pdfLatex, Polyglot
-
-" Python -> Flake8, Yapf
-
-" Remove Lightline, Tabline from Sources, Goyo and Zenroom.
-
-
-" Basic
 syntax enable
 filetype plugin on
+
 set number
 set wrap
 set expandtab
@@ -15,12 +8,13 @@ set foldcolumn=0
 set laststatus=0
 set showtabline=0
 set clipboard =unnamedplus
+set laststatus=2
+
 " set colorcolumn=80
 " set cursorline
-
-
-" Disables automatic commenting on newline:
-autocmd FileType * setlocal formatoptions-= formatoptions-=r formatoptions-=o
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
 
 " Split Navigations
@@ -30,82 +24,43 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 
-" Some Remaps
+" Remaps
 nnoremap <esc><esc> :noh<return>
 nnoremap o o<Esc>
 nnoremap j gj
 nnoremap k gk
 
-" Automatically deletes all trailing whitespace and newlines at end of file on save.
-autocmd BufWritePre * %s/\s\+$//e
-autocmd BufWritepre * %s/\n\+\%$//e
 
-
-" Airline Themes
+let g:lightline = {'colorscheme': 'seoul256'}
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 0
 " let g:airline_theme = 'minimalist'
 
-"Python
-" au BufNewFile,BufRead *.py
-"     \ set tabstop=4 |
-"     \ set softtabstop=4 |
-"     \ set shiftwidth=4 |
-"     \ set textwidth=79 |
-"     \ set expandtab |
-"     \ set autoindent |
-"     \ set fileformat=unix
-
-" Jedi
-" autocmd FileType python setlocal completeopt-=preview
 let g:jedi#popup_on_dot = 0
 
-
-"Ale -> Linting & Fixing
 let g:ale_linters_explicit = 1
+let g:ale_linters = {'python': ['flake8']}
+let g:ale_fixers = {'python' : ['yapf']}
 " let g:ale_fix_on_save = 1
-
-let g:ale_linters = {
-\   'python': ['flake8'],
-\}
-
-let g:ale_fixers = {
-\   'python' : ['yapf'],
-\}
 
 highlight clear ALEErrorSign
 highlight clear ALEWarningSign
 
 
-"Polyglot
-" let g:polyglot_disabled = ['latex']
-
-
-" Deoplete
 let g:deoplete#enable_at_startup = 1
 
-
-"Latex
 let g:tex_flavor = 'latex'
 let g:Tex_Diacritics = 1
-
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_CompileRule_pdf = 'latexmk -pdf -f $*'
 " let g:Tex_MultipleCompileFormats = 'pdf'
 
-autocmd FileChangedShell * echohl WarningMsg | echo "File changed shell." | echohl None
 
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-let g:lightline = {'colorscheme': 'wombat'}
-set laststatus=2
-
-" Compile and Clean Latex Logfiles
+" Clean Tex Logfiles
 map <leader>c :w! \| !compiler <c-r>%<CR>
 autocmd VimLeave *.tex !texclear %
 
-"Markdown
+" Markdown
 autocmd Filetype markdown,rmd map <leader>w yiWi[<esc>Ea](<esc>pa)
 autocmd Filetype markdown,rmd inoremap ,n ---<Enter><Enter>
 autocmd Filetype markdown,rmd inoremap ,b ****<++><Esc>F*hi
@@ -122,11 +77,19 @@ autocmd Filetype rmd inoremap ,r ```{r}<CR>```<CR><CR><esc>2kO
 autocmd Filetype rmd inoremap ,p ```{python}<CR>```<CR><CR><esc>2kO
 autocmd Filetype rmd inoremap ,c ```<cr>```<cr><cr><esc>2kO
 
-" Cpp compiling
+" Deletes all trailing whitespace and newlines at end of file
+autocmd BufWritePre * %s/\s\+$//e
+autocmd BufWritepre * %s/\n\+\%$//e
+
+autocmd FileChangedShell * echohl WarningMsg | echo "File changed shell." | echohl None
+autocmd FileType * setlocal formatoptions-= formatoptions-=r formatoptions-=o
+
+" C/C++ Compile and Build
 nnoremap <silent> <F8> :w <CR> :!g++ -std=c++17 % -o %< -Wall -Wshadow -Wextra -O2 -Wno-unused-result && ./%< <CR>
 nnoremap <silent> <F9> :w <CR> :!g++ -std=c++17 -Wshadow -Wall % -o %< -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG && ./%< <CR>
 
 
+" Themes
 set background=dark
 
 let g:gruvbox_contrast_dark = 'hard'
@@ -145,7 +108,7 @@ hi LineNr     ctermbg=NONE guibg=NONE
 hi SignColumn ctermbg=NONE guibg=NONE
 
 
-" Hide Statusbar
+" Hide Statusbar- Shift +S
 let s:hidden_all = 0
 function! ToggleHiddenAll()
     if s:hidden_all  == 0
