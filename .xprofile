@@ -1,15 +1,14 @@
-!/usr/bin/env sh
-# nvidia-settings --assign CurrentMetaMode="DP-0:1920x1080_75 +1366+0 {ForceCompositionPipeline=On}, HDMI-0: nvidia-auto-select +0+312" -a "DigitalVibrance=400"
-nvidia-settings --assign CurrentMetaMode="DP-0:1920x1080_75 +1366+0 , HDMI-0: nvidia-auto-select +0+312" -a "DigitalVibrance=400"
-# nvidia-settings --load-config-only
-# xrandr --output DP-0 --mode 1920x1080 --rate 75.0
-# setbg &		# Set the background
-feh --bg-fil --randomize ~/Pictures/Wallpapers/
-sxhkd &	# Bind keys
-# setxkbmap -model abnt2 -layout br -variant abnt2
-xset r rate 300 80 &	# Speed xrate up
-# xsetwacom set "Wacom Intuos S 2 Pen stylus" Button 1 "0" &
-unclutter &		# Remove mouse when idle
-# xcompmgr &		# xcompmgr for transparency
+# !/usr/bin/env sh
 
-# sdr_spew_level 0;net_droponsendoverflow 1;net_client_steamdatagram_enable_override 1
+# nvidia-settings --assign CurrentMetaMode="DP-0:1920x1080_75 +1366+0 {ForceCompositionPipeline=On}, HDMI-0: nvidia-auto-select +0+312" -a "DigitalVibrance=400"
+# nvidia-settings --assign CurrentMetaMode="DP-0:1920x1080_75 +1366+0 , HDMI-0: nvidia-auto-select +0+312" -a "DigitalVibrance=400"
+
+# setbg &
+feh --bg-fil --randomize ~/Pictures/Wallpapers/
+
+sxhkd &
+setxkbmap -model abnt2 -layout br -variant abnt2
+xset r rate 300 80 &
+# xsetwacom set "Wacom Intuos S 2 Pen stylus" Button 1 "0" &
+unclutter &
+xcompmgr &
