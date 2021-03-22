@@ -95,9 +95,11 @@ let g:Tex_CompileRule_pdf = 'latexmk -pdf -f $*'
 
 autocmd FileChangedShell * echohl WarningMsg | echo "File changed shell." | echohl None
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+let g:lightline = {'colorscheme': 'wombat'}
+set laststatus=2
 
 " Compile and Clean Latex Logfiles
 map <leader>c :w! \| !compiler <c-r>%<CR>
@@ -135,8 +137,8 @@ colorscheme koehler
 hi Error NONE
 hi ErrorMsg NONE
 
-" hi Comment cterm=italic
-" hi Comment guifg=#5C6370 ctermfg=59
+hi Comment cterm=italic
+hi Comment guifg=#5C6370 ctermfg=59
 
 hi Normal     ctermbg=NONE guibg=NONE
 hi LineNr     ctermbg=NONE guibg=NONE
