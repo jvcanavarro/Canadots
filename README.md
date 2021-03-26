@@ -2,17 +2,7 @@
 
 My personal/professional settings, for eventual recovery or desktop replacements.
 
-* fish
-* bashrc
-* ranger
-* zathura
-* terminal: kitty & terminator
-* awesome-wm, i3-lock
-* vimrc, my_configs.vim
-* compton & picom
-* keybindings with sxhkdrc
-* fontconfig for Arch Linux
-* profile settings: .xinitrc, .xprofile, .profile, etc.
+![](desktop.png)
 
 ### My Plugins
 
@@ -22,9 +12,9 @@ I use **Awesome** default setup, minus set-tabline and air-line for more screen 
 **Ale** for linting, auto fixing and formatting files; **Supertab** for fastest completations; **Polyglot** for amazing syntax highlighting when editing files with LISP based languages. Using _Afterglow_, provided by **Awesome Colorschemes**, especially when working with Clojure.
 #### Python
 **Jedi** for documentation at buffer and quick suggestions; **Yapf** for auto fixing and **Flake8** for linting. Actually having some performance problems when saving files and inserting points before classes.
-#### Clojure 
+#### Clojure
 **Fireplace** for buffer documentation, logical analysis and **Leiningen REPL** integration. Finally, Tim Pope's **Salve** for automatic REPL run.
-#### Latex 
+#### Latex
 **Vimtex** integrated with **LatexMK** for compiling and **Zathura**, my favorite document reader, for real time visualization. I'm also experimenting some presentation creation with Latex using **Beamer** userpackage.
 #### Markdown
 **Vim-Markdown** provides a nice syntax when editing .md files. Also, **Pandoc-Vim** allow me to create slide pdfs way more easier using Beamer and Pandoc.
