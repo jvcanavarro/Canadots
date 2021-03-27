@@ -96,6 +96,11 @@ theme.titlebar_maximized_button_normal_active   = theme.dir .. "/icons/titlebar/
 theme.titlebar_maximized_button_focus_inactive  = theme.dir .. "/icons/titlebar/maximized_focus_inactive.png"
 theme.titlebar_maximized_button_normal_inactive = theme.dir .. "/icons/titlebar/maximized_normal_inactive.png"
 
+-- theme.bg_systray='FFFFFFAA' .. 55
+local systray = wibox.widget.systray()
+theme.systray_icon_spacing ='5'
+theme.bg_systray = theme.bg_normal .. 40
+
 local markup = lain.util.markup
 local separators = lain.util.separators
 
@@ -356,7 +361,7 @@ function theme.at_screen_connect(s)
     s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons)
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = 16, bg = theme.bg_normal .. 75, fg = theme.fg_normal })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = 16, bg = theme.bg_normal .. 95, fg = theme.fg_normal })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -369,7 +374,7 @@ function theme.at_screen_connect(s)
         spr,
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            pl(wibox.widget.systray()),
+            pl(systray),
             -- wibox.container.margin(scissors, 4, 8),
 
             -- Gruvbox
@@ -380,7 +385,7 @@ function theme.at_screen_connect(s)
             pl(wibox.widget { memicon, mem.widget, layout = wibox.layout.align.horizontal }, "#98971a"),
             pl(wibox.widget { cpuicon, cpu.widget, layout = wibox.layout.align.horizontal }, "#d79921"),
             -- pl(wibox.widget { tempicon, temp.widget, layout = wibox.layout.align.horizontal }, "#d79921"),
-            pl(wibox.widget { fsicon, theme.fs and theme.fs.widget, layout = wibox.layout.align.horizontal }, "#458588"),
+            pl(wibox.widget { fsicon, theme.fs and theme.fs.widget, layout = wibox.layout.align.horizontal }, "#458588" ),
             -- pl(wibox.widget { baticon, bat.widget, layout = wibox.layout.align.horizontal }, "#8DAA9A"),
             pl(wibox.widget { neticon, net.widget, layout = wibox.layout.align.horizontal }, "#b16286"),
             pl(clock, "#689d6a"),
