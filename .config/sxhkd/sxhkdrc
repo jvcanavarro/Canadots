@@ -1,8 +1,0 @@
-super + v
-    i3lock -c "000000"
-
-super + c
-    nautilus ~ &
-
-super + y
-	$TERMINAL -e ncmpcpp
