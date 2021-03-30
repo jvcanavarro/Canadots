@@ -4,9 +4,9 @@
 # nvidia-settings --assign CurrentMetaMode="DP-0:1920x1080_75 +1366+0 , HDMI-0: nvidia-auto-select +0+312" -a "DigitalVibrance=400"
 
 # setbg &
-feh --bg-fil --randomize ~/Pictures/Wallpapers/
+# feh --bg-fil --randomize ~/Pictures/Wallpapers/
 
-sxhkd &
+# sxhkd &
 setxkbmap -model abnt2 -layout br -variant abnt2
 xset r rate 300 80 &
 # xsetwacom set "Wacom Intuos S 2 Pen stylus" Button 1 "0" &
