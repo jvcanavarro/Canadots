@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for i in $(pacman -Qq)
+for i in $(pacman -Qe)
 do
   grep "\[ALPM\] installed $i" /var/log/pacman.log
 done | \
