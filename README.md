@@ -27,11 +27,11 @@ Before using Mint for almost one year, I moved to **Arch Linux** aiming at bette
 ## Done
 - [x] Organize simplest configs
 - [x] List used vim plugins
+- [x] Add Desktop Wallpaper
 
 ## In Progress
 - Shell script to automatizate the pos-installation process
 - Improve README layout
 
 ## Todo
-- [ ] Add Desktop Wallpaper
 - [ ] Add cited plugins references
