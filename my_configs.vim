@@ -4,6 +4,7 @@ filetype plugin on
 set number
 set wrap
 set expandtab
+set textwidth=80
 set foldcolumn=0
 set laststatus=0
 set showtabline=0
@@ -95,7 +96,7 @@ set background=dark
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_contrast_light = 'soft'
 
-colorscheme koehler
+colorscheme gruvbox
 
 hi Error NONE
 hi ErrorMsg NONE
