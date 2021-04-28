@@ -250,6 +250,9 @@ globalkeys = my_table.join(
     awful.key({ modkey }, "p", function() awful.util.spawn_with_shell("flameshot gui") end,
               {description = "take a screenshot", group = "hotkeys"}),
 
+    awful.key({ modkey }, "i", function() awful.util.spawn_with_shell("nautilus") end,
+              {description = "open file manager", group = "hotkeys"}),
+
     -- X screen locker
     awful.key({ altkey, "Control" }, "l", function () os.execute(scrlocker) end,
               {description = "lock screen", group = "hotkeys"}),
@@ -399,8 +402,8 @@ globalkeys = my_table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Dropdown application
-    awful.key({ modkey, }, "i", function () awful.screen.focused().quake:toggle() end,
-              {description = "dropdown application", group = "launcher"}),
+    -- awful.key({ modkey, }, "i", function () awful.screen.focused().quake:toggle() end,
+    --           {description = "dropdown application", group = "launcher"}),
 
     -- Widgets popups
     -- awful.key({ altkey, }, "c", function () if beautiful.cal then beautiful.cal.show(7) end end,
