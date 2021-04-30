@@ -11,6 +11,7 @@ esac
 # exports
 # export PATH="/usr/bin"
 # export PATH="$HOME/.local/bin"
+export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
