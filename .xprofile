@@ -2,6 +2,8 @@
 
 # nvidia-settings --assign CurrentMetaMode="DP-0:1920x1080_75 +1366+0 {ForceCompositionPipeline=On}, HDMI-0: nvidia-auto-select +0+312" -a "DigitalVibrance=400"
 # nvidia-settings --assign CurrentMetaMode="DP-0:1920x1080_75 +1366+0 , HDMI-0: nvidia-auto-select +0+312" -a "DigitalVibrance=400"
+# nvidia-settings --assign CurrentMetaMode="DP-0:1920x1080_75 {ForceCompositionPipeline=On}" -a "DigitalVibrance=500"
+nvidia-settings --assign CurrentMetaMode="DP-0:1920x1080_75" -a "DigitalVibrance=500"
 
 # setbg &
 # feh --bg-fil --randomize ~/Pictures/Wallpapers/
@@ -10,5 +12,5 @@
 setxkbmap -model abnt2 -layout br -variant abnt2
 xset r rate 300 80 &
 # xsetwacom set "Wacom Intuos S 2 Pen stylus" Button 1 "0" &
-unclutter &
-xcompmgr &
+# unclutter &
+# xcompmgr &
