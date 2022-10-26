@@ -1,6 +1,6 @@
 # Canavarro Dotfiles
 
-My personal/professional settings, for eventual recovery or desktop replacements.
+My personal/professional settings, for eventual recovery or desktop replacements (frequently).
 
 ![](desktop.png)
 
