@@ -8,7 +8,7 @@ set textwidth=80
 set foldcolumn=0
 set laststatus=0
 set showtabline=0
-set clipboard =unnamedplus
+set clipboard+=unnamedplus
 set laststatus=2
 
 " set colorcolumn=80
