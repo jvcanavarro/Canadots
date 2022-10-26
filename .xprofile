@@ -1,18 +1,20 @@
 # !/usr/bin/env sh
 
-# nvidia-settings --assign CurrentMetaMode="DP-0:1920x1080_75 +1366+0 {ForceCompositionPipeline=On}, HDMI-0: nvidia-auto-select +0+312" -a "DigitalVibrance=400"
-# nvidia-settings --assign CurrentMetaMode="DP-0:1920x1080_75 +1366+0 , HDMI-0: nvidia-auto-select +0+312" -a "DigitalVibrance=400"
-# nvidia-settings --assign CurrentMetaMode="DP-0:1920x1080_75 {ForceCompositionPipeline=On}" -a "DigitalVibrance=500"
-nvidia-settings --assign CurrentMetaMode="DP-0:1920x1080_75" -a "DigitalVibrance=400"
+# nvidia-settings --assign CurrentMetaMode="DP-0:1920x1080_165 {ForceCompositionPipeline=On, AllowGSYNC:1}" -a "DigitalVibrance=800" # Single 165hz Monitor
+
+# nvidia-settings --assign CurrentMetaMode="DP-0:1920x1080_165 +0+565 {ForceFullCompositionPipeline=On}, HDMI-0:1920x1080 +1920+0 {rotation=right, ForceFullCompositionPipeline=On}" -a "DigitalVibrance=800" # Vertical 60hz Monitor w/ Composition
+nvidia-settings --assign CurrentMetaMode="DP-0:1920x1080_165 +0+565, HDMI-0:1920x1080 +1920+0 {rotation=right}" -a "DigitalVibrance=1023" # Vertical 60hz Monitor
+
 
 # feh --bg-fil --randomize ~/Pictures/Wallpapers/
-# fish_add_path .local/bin/
 
 # xsetwacom set "Wacom Intuos S 2 Pen stylus" Button 1 "0" &
 setxkbmap -model abnt2 -layout br -variant abnt2
 xset r rate 300 80 &
 
+
 # unclutter &
-# xcompmgr &
-# setbg &
+xbindkeys
+xcompmgr &
 # sxhkd &
+# setbg &
