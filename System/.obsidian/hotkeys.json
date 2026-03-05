@@ -1,0 +1,12 @@
+{
+  "editor:toggle-checklist-status": [],
+  "insert-template": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Mod"
+      ],
+      "key": "T"
+    }
+  ]
+}

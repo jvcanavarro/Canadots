@@ -1,0 +1,10 @@
+{
+  "promptDelete": false,
+  "attachmentFolderPath": "Notes",
+  "newFileLocation": "folder",
+  "alwaysUpdateLinks": true,
+  "newFileFolderPath": "Notes",
+  "showLineNumber": false,
+  "readableLineLength": true,
+  "strictLineBreaks": true
+}

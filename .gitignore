@@ -1,0 +1,13 @@
+# macOS
+**/.DS_Store
+
+# Obsidian workspace state (machine-specific UI state)
+System/.obsidian/workspace.json
+System/.obsidian/workspaces.json
+
+# Plugin binaries (reinstallable via Community Plugins)
+System/.obsidian/plugins/*/main.js
+System/.obsidian/plugins/*/styles.css
+
+# obsidian-git generated file
+System/.obsidian/plugins/obsidian-git/obsidian_askpass.sh

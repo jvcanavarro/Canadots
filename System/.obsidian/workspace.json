@@ -1,0 +1,267 @@
+{
+  "main": {
+    "id": "3ed19e69949688b1",
+    "type": "split",
+    "children": [
+      {
+        "id": "f046b0e40337b6f9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5437386592c67b29",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Gym.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Gym"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "59d3dcf7e4ca9cdc",
+    "type": "split",
+    "children": [
+      {
+        "id": "2134a03033b0d284",
+        "type": "tabs",
+        "dimension": 33.06930693069307,
+        "children": [
+          {
+            "id": "a08cb70164249562",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          },
+          {
+            "id": "f76d61cd4424724c",
+            "type": "leaf",
+            "state": {
+              "type": "tagfolder-view",
+              "state": {},
+              "icon": "stacked-levels",
+              "title": "Tag Folder"
+            }
+          }
+        ]
+      },
+      {
+        "id": "4f5a20161242a1eb",
+        "type": "tabs",
+        "dimension": 66.93069306930694,
+        "children": [
+          {
+            "id": "b7b6ee156de39176",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byModifiedTimeReverse",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "95013b5be74a828c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "7a0842a78129725c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "e2385bce453d15c9",
+            "type": "leaf",
+            "state": {
+              "type": "tagfolder-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "tagfolder-view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 231.5
+  },
+  "right": {
+    "id": "d625f03393088abe",
+    "type": "split",
+    "children": [
+      {
+        "id": "881d66ffd2c7a9ca",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "54e9163c386aedd8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Notes/Bruna Kuniyoshi.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Bruna Kuniyoshi"
+            }
+          },
+          {
+            "id": "3a58bec4a40c879d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Notes/Bruna Kuniyoshi.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Bruna Kuniyoshi"
+            }
+          },
+          {
+            "id": "b2270d4cc3118f9a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "57e90848bc6481ea",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Notes/Bruna Kuniyoshi.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Bruna Kuniyoshi"
+            }
+          },
+          {
+            "id": "19166405efa13e50",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "a08cb70164249562",
+  "lastOpenFiles": [
+    "Notes/Tasks.md",
+    "Notes/2026-03-05.md",
+    "Notes/Ideas.md",
+    "Untitled.canvas",
+    "Notes/Nathali Ribeiro.md",
+    "Notes/2025.md",
+    "Notes/Goals.md",
+    "Notes/Compras.md",
+    "Notes/Untitled.base",
+    "Notes/Untitled 1.base",
+    "Raw/Unrefined Work.md",
+    "Tasks Plugin - Review and check your Statuses 2024-12-25 21-59-33.md",
+    "Notes/Work Backlog.md",
+    "Notes/Masters Thesis.md",
+    "Indexes/Masters.md",
+    "Notes/Pedro Coelho.md",
+    "Notes/Untitled 2.base",
+    "Notes/Master Thesis.base",
+    "Notes/George Gondim.md",
+    "Notes/Olivia Ziller.md",
+    "Notes/Nuclea Integration.md",
+    "Notes/Gabriel Assis.md",
+    "Notes/Daniela Pegaz.md",
+    "Notes/Links.md",
+    "Notes/Bruna Kuniyoshi.md",
+    "Notes/Starter Project.md",
+    "Notes/Felipe Almeida.md",
+    "Tasks Plugin - Review and check your Statuses 2024-12-25 21-57-02.md",
+    "Tasks Plugin - Review and check your Statuses 2024-12-25 21-54-59.md",
+    "Indexes/Credit Foundations.md",
+    "Notes/Brag Document.md",
+    "Notes/Pasted image 20241216211720.png",
+    "Notes/a",
+    "Notes",
+    "Templates",
+    "Indexes",
+    "Tags",
+    "Sources"
+  ]
+}
